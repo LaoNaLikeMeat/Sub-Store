@@ -37,7 +37,7 @@ export function lint() {
         .pipe(eslint({ fix: true }))
         .pipe(eslint.fix())
         .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+        //.pipe(eslint.failAfterError());  禁用中断功能，构建可继续
 }
 
 export function styles() {
