@@ -36,8 +36,8 @@ export function lint() {
         .src('src/**/*.js')
         .pipe(eslint({ fix: true }))
         .pipe(eslint.fix())
-        .pipe(eslint.format())
-        //.pipe(eslint.failAfterError());  禁用中断功能，构建可继续
+        .pipe(eslint.format());
+        // .pipe(eslint.failAfterError()); // 已禁用，避免构建中断
 }
 
 export function styles() {
